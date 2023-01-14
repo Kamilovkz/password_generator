@@ -55,7 +55,7 @@ class App(CTk.CTk):
 
         self.cb_upper_var = tkinter.StringVar()
         self.cb_upper = CTk.CTkCheckBox(master=self.settings_frame, text="A-Z", variable=self.cb_upper_var,
-                                        onvalue=ascii_lowercase, offvalue="")
+                                        onvalue=ascii_uppercase, offvalue="")
         self.cb_upper.grid(row=2, column=2)
 
         self.cb_symbol_var = tkinter.StringVar()
