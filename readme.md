@@ -14,6 +14,9 @@ To get started, you will need to have Python and the customtkinter library insta
 
 The program's user interface is simple and easy to use. Simply specify the desired length and characters of the password and click the "Generate" button. The generated password will be displayed in the "Password" field. You can also copy the password to your clipboard by clicking the "Copy" button.
 
+## Screenshots
+![image](https://user-images.githubusercontent.com/38252272/212463508-40c2aff5-6c37-4ff2-993d-a9970634cec0.png)
+
 ## Note
 
 Please make sure you have all the dependecies installed before running the main.py file.
