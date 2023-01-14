@@ -3,6 +3,7 @@ import password
 import customtkinter as CTk
 from string import ascii_lowercase, ascii_uppercase, digits, punctuation
 from PIL import Image
+import pyperclip
 
 class App(CTk.CTk):
     def __init__(self):
@@ -19,12 +20,18 @@ class App(CTk.CTk):
         self.password_frame = CTk.CTkFrame(master=self, fg_color="transparent")
         self.password_frame.grid(row=1, column=0, padx=(20, 20), pady=(10, 10), sticky="nsew")
 
-        self.entry_password = CTk.CTkEntry(master=self.password_frame, width=300)
+        self.entry_password = CTk.CTkEntry(master=self.password_frame, width=250)
         self.entry_password.grid(row=0, column=0, padx=(10, 20))
 
-        self.btn_generator = CTk.CTkButton(master=self.password_frame, text="Generate", width=100,
+        # Button - Generate
+        self.btn_generator = CTk.CTkButton(master=self.password_frame, text="Generate", width=50,
                                            command=self.set_password)
         self.btn_generator.grid(row=0, column=1)
+
+        # Button - Copy
+        self.btn_copy = CTk.CTkButton(master=self.password_frame, text="Copy", width=50,
+                                      command=self.copy_password)
+        self.btn_copy.grid(row=0, column=2, padx=10)
 
         self.settings_frame = CTk.CTkFrame(master=self)
         self.settings_frame.grid(row=2, column=0, padx=(20, 20), pady=(10, 0), sticky='nsew')
@@ -83,6 +90,10 @@ class App(CTk.CTk):
                                                               characters=self.get_charaterst()))
         except:
             pass
+    def copy_password(self):
+        password = self.entry_password.get()
+        pyperclip.copy(password)
+
 
 if __name__ == '__main__':
     app = App()
