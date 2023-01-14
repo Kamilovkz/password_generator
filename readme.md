@@ -20,6 +20,6 @@ The program's user interface is simple and easy to use. Simply specify the desir
 ## Note
 
 Please make sure you have all the dependecies installed before running the main.py file.
-If you would like to run as exe file, you need install "customtkinter" using prompt, and follow this instructions, [tape here:)](https://github.com/TomSchimansky/CustomTkinter/wiki/Packaging)
+If you would like to run as exe file, you need install "customtkinter" using prompt, and follow this instructions, [tape here:)](https://github.com/TomSchimansky/CustomTkinter/wiki/Packaging), but before it you need delete dist folder
 
 Enjoy!
